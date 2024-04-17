@@ -24,7 +24,7 @@ class SearchPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
-                  width: MediaQuery.of(context).size.height * .35,
+                  width: MediaQuery.of(context).size.width * .7,
                   child: TextField(
                     autofocus: true,
                     style: TextStyle(color: Colors.white),

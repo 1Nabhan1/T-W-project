@@ -76,9 +76,12 @@ class HomeScreen extends StatelessWidget {
             ),
             Obx(() {
               if (home_controller.datas.isEmpty) {
-                return const Center(
-                  child: CircularProgressIndicator(),
-                );
+                return Column(children: [
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * .1,
+                  ),
+                  CircularProgressIndicator(),
+                ]);
               } else {
                 return Padding(
                   padding: const EdgeInsets.all(10.0),
