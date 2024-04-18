@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,7 +12,8 @@ class SearchPage extends StatelessWidget {
     final Home_controller home_controller = Get.put(Home_controller());
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: CupertinoColors.systemBlue.withOpacity(0.1),
+      backgroundColor: Colors.black,
+      // CupertinoColors.systemBlue.withOpacity(0.1),
       body: SafeArea(
         child: Column(
           children: [

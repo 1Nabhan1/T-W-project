@@ -15,11 +15,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      color: Colors.red,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
-        useMaterial3: true,
-      ),
+      theme: ThemeData(),
       getPages: PageRoutes.List,
       home: GetBuilder<Splash_controller>(
         builder: (_) => const Splash_screen(),

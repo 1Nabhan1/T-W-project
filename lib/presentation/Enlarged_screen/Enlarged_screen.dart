@@ -29,7 +29,7 @@ class EnlargedScreen extends StatelessWidget {
               )),
         ),
         resizeToAvoidBottomInset: false,
-        backgroundColor: CupertinoColors.systemBlue.withOpacity(0.1),
+        backgroundColor: Colors.black,
         body: GestureDetector(
           onVerticalDragEnd: (details) {
             if (details.primaryVelocity! > 0) {
@@ -44,48 +44,52 @@ class EnlargedScreen extends StatelessWidget {
             onDismissed: (_) {
               Get.back();
             },
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.network(img),
-                SizedBox(
-                  height: 20,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 10.0),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.favorite,
-                        size: 30,
-                        color: Colors.red,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        "${likes}",
-                        style: TextStyle(color: Colors.white, fontSize: 15),
-                      ),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      Icon(
-                        Icons.mode_comment_outlined,
-                        size: 30,
-                        color: Colors.grey,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        "${comments}",
-                        style: TextStyle(color: Colors.white, fontSize: 15),
-                      )
-                    ],
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.network(
+                    img,
                   ),
-                ),
-              ],
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.favorite,
+                          size: 30,
+                          color: Colors.red,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          "${likes}",
+                          style: TextStyle(color: Colors.white, fontSize: 15),
+                        ),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        Icon(
+                          Icons.mode_comment_outlined,
+                          size: 30,
+                          color: Colors.grey,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Text(
+                          "${comments}",
+                          style: TextStyle(color: Colors.white, fontSize: 15),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ));

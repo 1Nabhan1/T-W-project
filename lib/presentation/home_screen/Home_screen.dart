@@ -15,8 +15,10 @@ class HomeScreen extends StatelessWidget {
     final int crossAxisCount = screenWidth ~/ 200;
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: CupertinoColors.systemBlue.withOpacity(0.1),
+      backgroundColor: Colors.black,
+      // CupertinoColors.systemBlue.withOpacity(0.1),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         scrolledUnderElevation: 40,
         title: const Text(
           'Pixabay',

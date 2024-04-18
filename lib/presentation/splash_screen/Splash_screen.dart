@@ -9,9 +9,14 @@ class Splash_screen extends GetView<Splash_controller> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.grey.withOpacity(0.11),
+      backgroundColor: Colors.black.withOpacity(.9),
       body: Center(
-        child: Image.asset('assets/Splash.gif'),
+        child: Image.asset(
+          'assets/Splash.gif',
+          width: double.infinity,
+          height: double.infinity,
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
