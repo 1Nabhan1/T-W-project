@@ -6,12 +6,14 @@ class EnlargedScreen extends StatelessWidget {
   final String img;
   final int likes;
   final int comments;
+  final String tags;
 
   const EnlargedScreen({
     super.key,
     required this.img,
     required this.likes,
     required this.comments,
+    required this.tags,
   });
 
   @override
@@ -88,6 +90,21 @@ class EnlargedScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.tag,
+                        color: Colors.white,
+                      ),
+                      Text(
+                        tags,
+                        style: TextStyle(color: Colors.grey),
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),

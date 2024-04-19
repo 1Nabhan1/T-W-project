@@ -115,6 +115,7 @@ class HomeScreen extends StatelessWidget {
                                         img: datas.webformatURL!,
                                         likes: datas.likes!,
                                         comments: datas.comments!,
+                                        tags: datas.tags!,
                                       ),
                                       transition: Transition.fadeIn,
                                       duration:
